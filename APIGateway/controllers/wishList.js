@@ -1,7 +1,7 @@
 import axios from "axios";
 import dotenv from "dotenv/config";
 
-const wishListAPI = process.env.REACT_APP_WISHLIST_SERVICES_URI;
+const wishListAPI = process.env.REACT_APP_ITEM_SERVICES_URI + "/wishLists";
 
 export const getOneWishList = async (req, res) => {
     axios.get(`${wishListAPI}/${req.params.id}`)
